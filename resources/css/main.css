@@ -1,0 +1,548 @@
+﻿/*#region fonts */
+/*fonts*/
+@font-face {
+    font-family: 'Muli';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Muli Regular'), local('Muli-Regular'), url(https://fonts.gstatic.com/s/muli/v10/z6c3Zzm51I2zB_Gi7146Bg.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+    font-family: 'Muli';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Muli Bold'), local('Muli-Bold'), url(https://fonts.gstatic.com/s/muli/v10/WQIsflEaABH2ETkzZKPChw.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+    font-family: 'Muli';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Muli Italic'), local('Muli-Italic'), url(https://fonts.gstatic.com/s/muli/v10/RGzT9VzvdKojoeSA3nPC6Q.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+    font-family: 'Muli';
+    font-style: italic;
+    font-weight: 600;
+    src: local('Muli SemiBold Italic'), local('Muli-SemiBoldItalic'), url(https://fonts.gstatic.com/s/muli/v10/5ro9EzTZGBUdKaArmtrScltXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+    font-family: 'Philosopher';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Philosopher Regular'), local('Philosopher-Regular'), url(https://fonts.gstatic.com/s/philosopher/v8/OttjxgcoEsufOGSINYBGLY4P5ICox8Kq3LLUNMylGO4.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+    font-family: 'Philosopher';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Philosopher Bold'), local('Philosopher-Bold'), url(https://fonts.gstatic.com/s/philosopher/v8/napvkewXG9Gqby5vwGHICIlIZu-HDpmDIZMigmsroc4.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+/*#endregion */
+
+/*Universal Styles*/
+/*#region Universal styles */
+
+html {
+    font-size: 18px;
+}
+
+body {
+    background-color: mintcream;
+    width: 100%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: "Philosopher", sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-family: "Philosopher", sans-serif;
+    font-weight: 700;
+}
+
+h3 {
+    font-family: "Philosopher", sans-serif;
+    font-size: 1.17rem;
+    padding-bottom: .5rem;
+}
+
+h4 {
+    font-family: "Muli", sans-serif;
+    font-size: 1.12rem;
+}
+
+h5 {
+    font-family: "Muli", sans-serif;
+    font-size: .83rem;
+    padding-bottom: 1rem;
+}
+
+h6 {
+    font-family: "Philosopher", sans-serif;
+    font-size: 1.12rem;
+}
+
+p {
+    font-size: .83rem;
+    font-family: "Muli", sans-serif;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+#colmar {
+    font-weight: 700;
+}
+
+.sub-title h2 {
+    text-align: center;
+    padding: 32px 0 16px 0;
+}
+
+footer {
+    padding: 32px 0 16px 16px;
+}
+
+    footer h5 {
+        font-size: .65rem;
+    }
+
+.container {
+    position: relative;
+    top: 64px;
+}
+
+.darker {
+    background-color: #B0CACC;
+}
+
+.info a,
+.info-3 a {
+    color: #CD8C53;
+}
+
+.start-btn a {
+    color: white;
+}
+
+/*#endregion */
+
+/*Nav*/
+
+nav {
+    width: 100%;
+    position: fixed;
+    z-index: 5;
+}
+
+/*NAV*/
+/*min-width 0 - Mobile*/
+
+@media only screen and (min-width: 0) {
+    .container {
+        width: 100%;
+    }
+
+    nav {
+        margin: 0 auto;
+        background-color: white;
+        height: 64px;
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-mob {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        padding: 0 10px;
+        justify-content: space-between;
+    }
+
+    .nav-left-lg,
+    .nav-right-lg {
+        display: none;
+    }
+
+
+}
+
+/*min width 720*/
+
+@media only screen and (min-width: 720px) {
+    .container {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .nav-mob {
+        display: none;
+    }
+
+    nav {
+        justify-content: space-between;
+    }
+
+    .nav-left-lg {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding-left: 26px;
+    }
+
+    .nav-right-lg {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 26px;
+    }
+
+    .nav-right-lg h4 {
+            padding: 0 10px;
+    }
+
+    .nav-right-lg a:hover {
+        transition: color 0;
+        color: #ad4545;
+    }
+}
+/*END NAV*/
+
+/*LEARN NEW EVERYDAY*/
+
+@media only screen and (min-width: 0) {
+    .outer {
+        padding: 16px 12px;
+    }
+
+    .inner-pad {
+        padding-left: 0;
+    }
+
+    .pic-text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pic-text img {
+            height: 180px;
+            width: 100%;
+    }
+
+    .learn h1 {
+        padding: 30px 0;
+    }
+
+    .start-btn {
+        height: 32px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #569599;
+        margin: 24px 0;
+        padding-bottom: 0;
+    }
+
+    .start-btn a:hover {
+        transition: color 0;
+        color: black;
+    }
+}
+
+@media only screen and (min-width: 720px) {
+    .outer {
+        width: 95%;
+        margin: 0 auto;
+        padding: 32px 24px;
+    }
+
+    .inner-pad {
+        padding-left: 40px;
+    }
+
+    .pic-text {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .pic-text img {
+            height: auto;
+            width: 60%;
+    }
+
+    .learn-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-right: 5%;
+    }
+
+    .start-btn {
+        width: 70%;
+        margin: 36px 0;
+    }
+}
+
+/*PRACTICE*/
+
+@media only screen and (min-width: 0) {
+    .info-mob {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mob-img {
+        width: 100%;
+    }
+
+    .lg-img {
+        display: none;
+    }
+
+    .main-pic {
+        display: none;
+    }
+
+    .info-txt {
+        padding: 16px 0;
+    }
+
+    .info-txt a:hover {
+        transition: color 0;
+        color: #033d41;
+    }
+
+    .practice-text {
+        display: none;
+    }
+
+    .practice-row {
+        padding: 16px 12px;
+    }
+
+    .practice-row .darker {
+            background-color: mintcream;
+        }
+}
+
+@media only screen and (min-width: 720px) {
+    .practice {
+        width: 95%;
+        display: flex;
+        flex-direction: row;
+        padding: 32px 24px;
+    }
+
+    .outer-2 {
+        width: 95%;
+        margin: 0 auto;
+        padding: 0 24px;
+    }
+
+    .main-pic {
+        display: flex;
+        width: 60%;
+    }
+
+    .info {
+        width: 423px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 0 0 0 40px;
+    }
+
+    .mob-img {
+        display: none;
+    }
+
+    .info-1,
+    .info-2 {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .info-3 {
+        width: 423px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .lg-img {
+        width: 35%;
+        display: flex;
+        padding-right: 24px;
+    }
+
+    .practice-row {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .quote h5 {
+        padding-top: 24px;
+        font-style: italic;
+    }
+
+    .practice-row .practice-text {
+        padding-right: 0;
+    }
+
+    .info .darker,
+    .practice-row .darker {
+        padding: 16px 16px;
+        margin-left: 24px;
+        background-color: #B0CACC;
+    }
+
+    .practice-text {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        padding-right: 5%;
+    }
+}
+
+/*START LEARNING*/
+
+@media only screen and (min-width: 0) {
+    .learning-mob {
+        display: flex;
+        flex-direction: column;
+        padding: 0 16px;
+    }
+
+    .learning-mob h3 {
+            padding: 16px;
+            background-color: #B0CACC;
+            margin: .25rem 0;
+    }
+
+    .learning-mob a {
+            color: #033d41;
+    }
+
+    .learning-lg {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 720px) {
+    .learning-mob {
+        display: none;
+    }
+
+    .learning-lg {
+        width: 95%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .row {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        /*margin: 0 auto;*/
+    }
+
+    .course-2 {
+        padding: 0 32px;
+    }
+
+    .course {
+        width: 33.3%;
+        display: flex;
+        flex-direction: column;
+        /*padding: 0 16px;*/
+    }
+
+    .course img {
+            height: 11rem;
+            padding: 16px 0;
+    }
+
+    .course-2 h5 {
+        width: 430px;
+    }
+}
+
+/*THESIS EXHIBITS*/
+
+@media only screen and (min-width: 0) {
+    .thesis-lg {
+        display: none;
+    }
+
+    .thesis {
+        padding-top: 32px;
+    }
+
+    .thesis .info {
+            padding-left: 0;
+    }
+
+    .thesis .info-1 {
+            padding-left: 40px;
+    }
+
+    .thesis .quote {
+            display: none;
+    }
+}
+
+@media only screen and (min-width: 720px) {
+    .thesis-mob {
+        display: none;
+    }
+
+    .thesis-lg {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .practice video {
+        width: 60%;
+    }
+
+    .thesis .quote {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+    }
+}
+
+/*for large screens*/
+@media only screen and (min-width: 1500px) {
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
